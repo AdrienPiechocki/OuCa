@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun CounterView(counterViewModel: CounterViewModel) {
-    // var count by remember { mutableStateOf(0) }
     val count by counterViewModel.count.collectAsState()
     val hue by counterViewModel.hue.collectAsState()
     val light by counterViewModel.light.collectAsState()
