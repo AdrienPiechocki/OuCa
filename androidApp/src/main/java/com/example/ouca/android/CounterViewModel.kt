@@ -40,7 +40,7 @@ class CounterViewModel: ViewModel() {
         val n = (0..100).shuffled().last()
         count.value = n
         hue.value = n.toFloat()
-        light.value = n.toFloat()/100
+        light.value = 1F-(n.toFloat()/100)
 
     }
 }
