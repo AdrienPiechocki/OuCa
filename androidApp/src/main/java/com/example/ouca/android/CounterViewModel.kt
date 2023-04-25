@@ -35,4 +35,12 @@ class CounterViewModel: ViewModel() {
         hue.value=100F
         light.value = 0F
     }
+
+    fun randomizeCount() {
+        val n = (0..100).shuffled().last()
+        count.value = n
+        hue.value = n.toFloat()
+        light.value = n.toFloat()/100
+
+    }
 }

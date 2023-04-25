@@ -71,5 +71,12 @@ fun CounterView(counterViewModel: CounterViewModel) {
         ) {
             Text(text = "Maximize", color = Color.hsl(0F, 0F, light))
         }
+        Button(
+            onClick = { counterViewModel.randomizeCount() },
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.hsl(hue, 1F,0.5F)),
+            modifier = Modifier.width(200.dp)
+        ) {
+            Text(text = "Randomize", color = Color.hsl(0F, 0F, light))
+        }
     }
 }
