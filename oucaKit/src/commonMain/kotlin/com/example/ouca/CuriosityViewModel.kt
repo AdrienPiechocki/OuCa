@@ -1,4 +1,7 @@
 package com.example.ouca
 
-class CuriosityViewModel {
+import com.rickclephas.kmm.viewmodel.KMMViewModel
+
+open class CuriosityViewModel: KMMViewModel() {
+
 }
