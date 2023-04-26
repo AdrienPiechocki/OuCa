@@ -1,12 +1,17 @@
-package app.myeline.ouca.android
+package app.myeline.ouca
 
-import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
+import com.rickclephas.kmm.viewmodel.KMMViewModel
+import com.rickclephas.kmm.viewmodel.MutableStateFlow
+import com.rickclephas.kmp.nativecoroutines.NativeCoroutinesState
 
-class CounterViewModel: ViewModel() {
-    val count = MutableStateFlow(0)
-    val hue = MutableStateFlow(0F)
-    val light = MutableStateFlow(1F)
+open class CounterViewModel: KMMViewModel() {
+
+    @NativeCoroutinesState
+    val count = MutableStateFlow(viewModelScope,0)
+    @NativeCoroutinesState
+    val hue = MutableStateFlow(viewModelScope,0F)
+    @NativeCoroutinesState
+    val light = MutableStateFlow(viewModelScope,1F)
     fun incrementCount() {
         if(count.value<100) {
             count.value++
@@ -43,4 +48,5 @@ class CounterViewModel: ViewModel() {
         light.value = 1F-(n.toFloat()/100)
 
     }
+
 }

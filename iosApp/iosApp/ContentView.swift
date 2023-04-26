@@ -2,10 +2,8 @@ import SwiftUI
 import oucaKit
 
 struct ContentView: View {
-	let greet = Greeting().greet()
-
 	var body: some View {
-		Text(greet)
+		CounterView()
 	}
 }
 

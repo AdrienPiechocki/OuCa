@@ -11,8 +11,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import app.myeline.ouca.CounterViewModel
 import app.myeline.ouca.android.CounterView
-import app.myeline.ouca.android.CounterViewModel
 
 class MainActivity : ComponentActivity() {
     private val counterViewModel by viewModels<CounterViewModel>()
