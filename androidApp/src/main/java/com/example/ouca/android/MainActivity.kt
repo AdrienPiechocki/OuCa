@@ -12,10 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import app.myeline.ouca.CounterViewModel
+import app.myeline.ouca.CuriosityViewModel
 import app.myeline.ouca.android.CounterView
 
 class MainActivity : ComponentActivity() {
     private val counterViewModel by viewModels<CounterViewModel>()
+    private val curiosityViewModel by viewModels<CuriosityViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -25,6 +27,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     CounterView(counterViewModel)
+                    CuriosityView(curiosityViewModel)
                 }
             }
         }
